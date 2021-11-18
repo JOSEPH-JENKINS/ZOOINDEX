@@ -13,7 +13,7 @@ def description(id):
 @app.template_filter('logo')
 def logo(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res["data"][str(id)]["logo"]
+    return res
 
 @app.template_filter('web')
 def web(id):
