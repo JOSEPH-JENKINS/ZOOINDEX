@@ -18,7 +18,7 @@ def logo(id):
 @app.template_filter('web')
 def web(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res["data"][str(id)]["urls"]["website"]
+    return res
 
 @app.template_filter('tw')
 def tw(id):
