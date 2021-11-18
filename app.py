@@ -13,12 +13,12 @@ def description(id):
 @app.template_filter('logo')
 def logo(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res
+    return res["data"][str(id)]["logo"]
 
 @app.template_filter('web')
 def web(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res
+    return res["data"][str(id)]["urls"]["website"]
 
 @app.template_filter('tw')
 def tw(id):
