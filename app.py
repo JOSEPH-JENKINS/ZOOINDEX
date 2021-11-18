@@ -23,7 +23,7 @@ def web(id):
 @app.template_filter('tw')
 def tw(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res["data"][str(id)]["urls"]["twitter"][0]
+    return res[str(id)]["urls"]["twitter"][0]
 
 @app.template_filter('rd')
 def rd(id):
