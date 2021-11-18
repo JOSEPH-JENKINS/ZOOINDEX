@@ -108,7 +108,7 @@
                                                     <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[0]['image'] }}" width="50px"
                                                             height="50px">
                                                         <div class="media-body">
-                                                            <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[0]['id'] }}">{{ currencies[0]["name"] }}</a> <br> <span class="text-danger">${{ currencies[0]["symbol"] }}</span></h6>
+                                                            <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[0]['symbol'] }}">{{ currencies[0]["name"] }}</a> <br> <span class="text-danger">${{ currencies[0]["symbol"] }}</span></h6>
                                                             <div><span class="text-muted small mr-1">Marketcap:</span><span class="text-success">${{ currencies[0]["market_cap"] }}</span></div>
                                                             <div><span class="text-muted small mr-1">Price:</span><span class="text-info">${{ currencies[0]["price"] }}</span></div>
                                                         </div>
@@ -122,7 +122,7 @@
                                                     <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[1]['image'] }}" width="50px"
                                                         height="50px">
                                                     <div class="media-body">
-                                                        <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[0]['id'] }}">{{ currencies[0]["name"] }}</a> <br> <span class="text-danger">${{ currencies[1]["symbol"] }}</span></h6>
+                                                        <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[1]['symbol'] }}">{{ currencies[1]["name"] }}</a> <br> <span class="text-danger">${{ currencies[1]["symbol"] }}</span></h6>
                                                         <div><span class="text-muted small mr-1">Marketcap:</span><span class="text-success">${{ currencies[1]["market_cap"] }}</span></div>
                                                         <div><span class="text-muted small mr-1">Price:</span><span class="text-info">${{ currencies[1]["price"] }}</span></div>
                                                     </div>
@@ -238,19 +238,19 @@
                                                                 <td class="MuiTableCell-root MuiTableCell-body jss53" data-colindex="2"
                                                                     data-testid="MuiDataTableBodyCell-2-24">
                                                                     <div class="jss53">
-                                                                        <div class="zindex-price"><b>${{ currency["current_price"] }}</b></div>
+                                                                        <div class="zindex-price"><b>${{ currency["quote"]["USD"]["price"] }}</b></div>
                                                                     </div>
                                                                 </td>
                                                                 <td class="MuiTableCell-root MuiTableCell-body jss53" data-colindex="3"
                                                                     data-testid="MuiDataTableBodyCell-3-24">
                                                                     <div class="jss53">
-                                                                        <div class="zindex-marketcap"><span>${{ currency["market_cap"] }}</span></div>
+                                                                        <div class="zindex-marketcap"><span>${{ currency["quote"]["USD"]["market_cap"] }}</span></div>
                                                                     </div>
                                                                 </td>
                                                                 <td class="MuiTableCell-root MuiTableCell-body jss53" data-colindex="4"
                                                                     data-testid="MuiDataTableBodyCell-4-24">
                                                                     <div class="jss53">
-                                                                        <div class="zindex-change"><span class="text-danger font-weight-bold">{{ currency["price_change_percentage_24h"] }}</span></div>
+                                                                        <div class="zindex-change"><span class="text-danger font-weight-bold">{{ currency["quote"]["USD"]["percent_change_24h"] }}</span></div>
                                                                     </div>
                                                                 </td>
                                                                 <td class="MuiTableCell-root MuiTableCell-body jss53" data-colindex="5"
@@ -259,7 +259,7 @@
                                                                         <div class="zindex-platform"><a
                                                                                 href="https://etherscan.io/address/0xa682ee16b497afceedf47e4820fc2af3845fd2d2"
                                                                                 target="_blank" rel="noopener noreferrer" class="text-secondary"><span
-                                                                                    class="badge bg-eth text-white">{{ currency["platform"] }}</span></a></div>
+                                                                                    class="badge bg-eth text-white">{{ currency["platform"]["symbol"] }}</span></a></div>
                                                                     </div>
                                                                 </td>
                                                                 <td class="MuiTableCell-root MuiTableCell-body jss53" data-colindex="6"
