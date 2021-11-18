@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.template_filter('descrip')
 def description(id):
     res = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", {"id": id})
-    return res["data"][str(id)]["description"]
+    return res
 
 @app.template_filter('logo')
 def logo(id):
