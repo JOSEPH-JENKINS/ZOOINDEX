@@ -105,7 +105,7 @@
                                         <div class="col-lg-6">
                                             <div style="cursor:pointer" class="card-top card-img-left mb-3 card">
                                                 <div class="card-body">
-                                                    <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[0]['image'] }}" width="50px"
+                                                    <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[0]['id'] | logo }}" width="50px"
                                                             height="50px">
                                                         <div class="media-body">
                                                             <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[0]['symbol'] }}">{{ currencies[0]["name"] }}</a> <br> <span class="text-danger">${{ currencies[0]["symbol"] }}</span></h6>
@@ -119,7 +119,7 @@
                                         <div class="col-lg-6">
                                             <div style="cursor:pointer" class="card-top card-img-left mb-3 card">
                                                 <div class="card-body">
-                                                    <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[1]['image'] }}" width="50px"
+                                                    <div class="media d-flex"><img class="mr-3 my-auto" src="{{ currencies[1]['id'] | logo }}" width="50px"
                                                         height="50px">
                                                     <div class="media-body">
                                                         <h6 class="mb-0 font-weight-bold"><a href="/currencies/{{ currencies[1]['symbol'] }}">{{ currencies[1]["name"] }}</a> <br> <span class="text-danger">${{ currencies[1]["symbol"] }}</span></h6>
