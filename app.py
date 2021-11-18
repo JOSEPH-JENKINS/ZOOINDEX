@@ -47,7 +47,7 @@ def get_coins(length):
 
 def get_coin(id):
     data = fetch_data("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest", {"symbol": id, "convert": "USD"})
-    return data["data"][id]
+    return data["data"][str(id)]
 
 @app.route("/", methods=["GET", "POST"])
 def home():
